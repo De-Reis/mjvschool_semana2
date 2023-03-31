@@ -1,0 +1,28 @@
+<app-header></app-header>
+<app-listagem></app-listagem>
+
+<br>
+
+<div *ngFor="let colaborador of colaboradores">
+  <div class="produtos-card" >
+    <div class="row">
+      <div class="card 4">
+        <h2>Id: {{ colaborador.id }}</h2>
+        <p>Nome: {{ colaborador.nome }} </p>
+        <p *ngIf="exibeSalario" >Salário: {{ colaborador.salario }}</p>
+        <button (click)="exibeSalarioSimNao()" >Exibir Salário</button>
+        <p>Cargo: {{ colaborador.cargo }} </p>
+        <p>Contratado: {{ colaborador.contratado }} anos</p>
+        <p>Linguagens: {{ colaborador.linguagens }} </p>
+        <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRbiMjUoOxJCAMB9poSO2wLg34m7OxmyaT-A&usqp=CAU"/>
+        <p [ngClass]="{'colaborador-ativa': colaborador.ferias, 'colaborador-ferias': !colaborador.ferias}" >
+          {{ colaborador.ferias ? 'Colaborador na ativa' : 'Colaborador em férias' }}</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<app-footer></app-footer>
