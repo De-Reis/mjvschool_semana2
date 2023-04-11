@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlueDirective } from './directives/blue.directive';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,9 @@ import { BlueDirective } from './directives/blue.directive';
     BlueDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+
   ],
 
   exports: [
